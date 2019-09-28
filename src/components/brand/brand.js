@@ -1,33 +1,26 @@
 import React from 'react';
-import MyRouting from './routing/route';
-import Header from './shared/header/header';
-import Home from './components/home/home';
-import Brand from './components/brand/brand';
-import Sidebar from './shared/sidebar/sidebar';
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 import Nav from 'react-bootstrap/Nav'
 import NavLink from 'react-bootstrap/NavLink'
 import NavItem from 'react-bootstrap/NavItem'
 
-import './App.css'
+import './brand.css'
 
-function App() {
+function Brand() {
   return (
-    <div>
-      <Header />
       <div className='body_content'>
         <Tab.Container id="left-tabs-example" defaultActiveKey="home">
-            <div className='sidebar sidebar_list'>
+            <div className='sidebar sidebar_list second'>
               <Nav variant="pills" className="flex-column">
                 <Nav.Item>
-                  <Nav.Link eventKey="learn">Learn</Nav.Link>
+                  <Nav.Link eventKey="learn">First</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="build">Build</Nav.Link>
+                  <Nav.Link eventKey="build">Second</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="our_brand">Our Brand</Nav.Link>
+                  <Nav.Link eventKey="our_brand">Third</Nav.Link>
                 </Nav.Item>
                 
               </Nav>
@@ -35,24 +28,22 @@ function App() {
             <div className='content'>
               <Tab.Content>
                 <Tab.Pane eventKey="home">
-                  <Home />
+                  <h2>Brand Home</h2>
                 </Tab.Pane>
                 <Tab.Pane eventKey="learn">
-                  <h2>learn</h2>
+                  <h2>first</h2>
                 </Tab.Pane>
                 <Tab.Pane eventKey="build">
-                  <h2>build</h2>
+                  <h2>second</h2>
                 </Tab.Pane>
                 <Tab.Pane eventKey="our_brand">
-                  <Brand />
+                  <h2>third</h2>
                 </Tab.Pane>
               </Tab.Content>
             </div>
         </Tab.Container>
       </div>
-
-    </div>
   );
 }
 
-export default App;
+export default Brand;
