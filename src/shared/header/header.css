@@ -49,3 +49,14 @@
     right: -23px;
     z-index: -2;    
 }
+@media all and (max-width: 540px){
+  .navbar .logo,.navbar .right_nav{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%
+  }
+  .navbar .logo{
+    margin-bottom: 20px;
+  }
+}

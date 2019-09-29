@@ -17,7 +17,7 @@ body {
   background-color: rgb(14, 112, 124);
 }
 .body_content .sidebar.second {
-  background-color: #5f989f
+  background-color: rgb(95,152,159)
 }
 .body_content .content {
   flex: 0 0 85%;
@@ -39,8 +39,21 @@ body {
   border-radius: 0;
 }
 .sidebar_list .nav-item a.active {
-  background-color: #5f989f;
+  background-color: #8dc1c7;
 }
 .sidebar_list.second .nav-item a.active {
   background-color: #b6cfd0;
+}
+
+@media all and (max-width: 540px){
+  .body_content .sidebar,.body_content .content{
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  .body_content .sidebar {
+    text-align: center
+  }
+  .body_content .sidebar.second {
+    border-top: 2px solid  rgb(37, 87, 94)
+  }
 }

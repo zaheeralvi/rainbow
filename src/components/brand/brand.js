@@ -1,9 +1,6 @@
 import React from 'react';
 import Tab from 'react-bootstrap/Tab'
-import Tabs from 'react-bootstrap/Tabs'
 import Nav from 'react-bootstrap/Nav'
-import NavLink from 'react-bootstrap/NavLink'
-import NavItem from 'react-bootstrap/NavItem'
 
 import './brand.css'
 

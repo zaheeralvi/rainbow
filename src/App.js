@@ -1,14 +1,9 @@
 import React from 'react';
-import MyRouting from './routing/route';
 import Header from './shared/header/header';
 import Home from './components/home/home';
 import Brand from './components/brand/brand';
-import Sidebar from './shared/sidebar/sidebar';
 import Tab from 'react-bootstrap/Tab'
-import Tabs from 'react-bootstrap/Tabs'
 import Nav from 'react-bootstrap/Nav'
-import NavLink from 'react-bootstrap/NavLink'
-import NavItem from 'react-bootstrap/NavItem'
 
 import './App.css'
 

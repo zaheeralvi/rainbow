@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Dropdown from 'react-bootstrap/Dropdown'
-import DropdownButton from 'react-bootstrap/DropdownButton'
-import DropdownToggle from 'react-bootstrap/DropdownToggle'
-import DropdownMenu from 'react-bootstrap/DropdownMenu'
-import DropdownItem from 'react-bootstrap/DropdownItem'
 import './header.css'
 
 class Header extends Component {
 
-    constructor(props) {
-        super(props)
-    }
 
     render() {
         return (
