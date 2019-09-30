@@ -19,10 +19,15 @@ class Header extends Component {
     currentKey(key) {
         console.log(key)
         this.setState({ main: key })
+        if(key<10){
+            this.props.onChange(key)
+        }else{
+            this.props.onSubUpdate(key)
+        }
     }
 
-    stopClose(e){
-       e.preventDefault()
+    stopClose(e) {
+        e.preventDefault()
     }
 
     render() {
@@ -64,11 +69,11 @@ class Header extends Component {
 
                     <ButtonToolbar className='mobile_menu'>
                         <DropdownButton onSelect={k => this.currentKey(k)} >
-                            <Dropdown.Item className='lvl1' onClick={$event=>this.stopClose($event)} eventKey="1">Aaron</Dropdown.Item>
-                            {this.state.main == 1 ? <Dropdown.Item className='lvl3' eventKey="11">Profile</Dropdown.Item>
-                                : null
-                            }
-                            {this.state.main == 1 ? <Dropdown.Item className='lvl3' eventKey="12">SIGN OUT</Dropdown.Item>
+                            <Dropdown.Item className='lvl1' onClick={$event => this.stopClose($event)} eventKey="1">Aaron</Dropdown.Item>
+                            {this.state.main == 1 ? <div>
+                                <Dropdown.Item className='lvl3' eventKey="11">Profile</Dropdown.Item>
+                                <Dropdown.Item className='lvl3' eventKey="12">SIGN OUT</Dropdown.Item>
+                            </div>
                                 : null
                             }
                             <Dropdown.Item className='lvl1' eventKey="2">Account</Dropdown.Item>
