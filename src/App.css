@@ -46,14 +46,11 @@ body {
 }
 
 @media all and (max-width: 540px){
-  .body_content .sidebar,.body_content .content{
+  .body_content .content{
     flex: 0 0 100%;
     width: 100%;
   }
   .body_content .sidebar {
-    text-align: center
-  }
-  .body_content .sidebar.second {
-    border-top: 2px solid  rgb(37, 87, 94)
+    display: none
   }
 }

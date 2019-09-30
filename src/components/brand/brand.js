@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 import './brand.css'
 
 function Brand() {
+  
   return (
       <div className='body_content'>
         <Tab.Container id="left-tabs-example" defaultActiveKey="home">
