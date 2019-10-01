@@ -102,7 +102,9 @@
   background-color: rgb(95,152,159);
   color: #fff;
 }
-
+.custom_lvl{
+  padding: .25rem 1.5rem;
+}
 @media all and (max-width: 540px){
   .navbar .right_nav{
     display: none

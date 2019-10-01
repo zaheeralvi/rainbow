@@ -32,12 +32,11 @@ class App extends Component {
   
 
   render() {
-    var { main, sub } = this.state;
     return (
       <div>
         <Header onChange={this.updateMenu} onSubUpdate={this.subUpdate} />
         <div className='body_content'>
-          <Tab.Container id="left-tabs-example" activeKey={this.state.main} onSelect={k=>this.updateState(k)}>
+          <Tab.Container id="left-tabs-example" activeKey={this.state.main} onSelect={k=>this.updateMenu(k)}>
             <div className='sidebar sidebar_list'>
               <Nav variant="pills" className="flex-column">
                 <Nav.Item>

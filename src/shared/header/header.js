@@ -69,8 +69,8 @@ class Header extends Component {
 
                     <ButtonToolbar className='mobile_menu'>
                         <DropdownButton onSelect={k => this.currentKey(k)} >
-                            <Dropdown.Item className='lvl1' onClick={$event => this.stopClose($event)} eventKey="1">Aaron</Dropdown.Item>
-                            {this.state.main == 1 ? <div>
+                            <p className='lvl1 custom_lvl' onClick={() => this.currentKey(1)}>Aaron</p>
+                            {this.state.main === 1 ? <div>
                                 <Dropdown.Item className='lvl3' eventKey="11">Profile</Dropdown.Item>
                                 <Dropdown.Item className='lvl3' eventKey="12">SIGN OUT</Dropdown.Item>
                             </div>
@@ -79,8 +79,8 @@ class Header extends Component {
                             <Dropdown.Item className='lvl1' eventKey="2">Account</Dropdown.Item>
                             <Dropdown.Item className='lvl2' eventKey="3">Home</Dropdown.Item>
                             <Dropdown.Item className='lvl2' eventKey="4">Build</Dropdown.Item>
-                            <Dropdown.Item className='lvl2' eventKey="5">Our Brand</Dropdown.Item>
-                            {this.state.main == 5 ? <div>
+                            <p className='lvl2 custom_lvl' onClick={() => this.currentKey(5)}>Our Brand</p>
+                            {this.state.main === 5 ? <div>
                                 <Dropdown.Item className='lvl3' eventKey="51">Company Info</Dropdown.Item>
                                 <Dropdown.Item className='lvl3' eventKey="52">Our Foundations</Dropdown.Item>
                                 <Dropdown.Item className='lvl3' eventKey="53">Our Personality</Dropdown.Item>
