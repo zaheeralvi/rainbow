@@ -12,31 +12,31 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      main:'3',
-      sub:''
+      main: '3',
+      sub: ''
     }
     this.updateMenu = this.updateMenu.bind(this)
     this.subUpdate = this.subUpdate.bind(this)
   }
-  updateMenu(key){
+  updateMenu(key) {
     this.setState({
-      main:key
+      main: key
     })
   }
-  
-  subUpdate(key){
+
+  subUpdate(k) {
     this.setState({
-      main:key
+      sub: k
     })
   }
-  
+
 
   render() {
     return (
       <div>
-        <Header onChange={this.updateMenu} onSubUpdate={this.subUpdate} />
+        <Header onChange={this.updateMenu} subUpdate={this.subUpdate} />
         <div className='body_content'>
-          <Tab.Container id="left-tabs-example" activeKey={this.state.main} onSelect={k=>this.updateMenu(k)}>
+          <Tab.Container id="left-tabs-example" activeKey={this.state.main} onSelect={k => this.updateMenu(k)}>
             <div className='sidebar sidebar_list'>
               <Nav variant="pills" className="flex-column">
                 <Nav.Item>
@@ -60,7 +60,7 @@ class App extends Component {
                   <h2>learn</h2>
                 </Tab.Pane> */}
                 <Tab.Pane eventKey="4">
-                  <h2>build</h2>
+                  <h2>build day</h2>
                 </Tab.Pane>
                 <Tab.Pane eventKey="5">
                   <Brand active={this.state.sub} />

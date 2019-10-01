@@ -59,7 +59,7 @@
   cursor: pointer;
   background-color: rgb(14, 112, 124);
 }
-.dropdown-menu.show{right: -40px;left: unset;margin-top: 40px;padding: 2px;background-color: rgb(14, 112, 124);}
+.dropdown-menu.show{right: 0;left: unset;padding: 2px;background-color: rgb(182, 207, 208);}
 .mobile_menu .dropdown-toggle,
 .mobile_menu .dropdown-toggle:active,
 .mobile_menu .dropdown-toggle:before,
@@ -112,4 +112,5 @@
   .mobile_menu{
     display: inline-block;
   }
+  .dropdown-menu.show{right: -40px;left: unset;margin-top: 40px;padding: 2px;background-color: rgb(14, 112, 124);}
 }

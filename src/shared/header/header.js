@@ -18,16 +18,15 @@ class Header extends Component {
 
     currentKey(key) {
         console.log(key)
-        this.setState({ main: key })
-        if(key<10){
-            this.props.onChange(key)
-        }else{
-            this.props.onSubUpdate(key)
+        if (key < 10) {
+            this.setState({ main: key })
+            if (key !== 1 && key !== 2) {
+                this.props.onChange(key)
+            }
+        } else {
+            this.setState({ sub: key })
+            this.props.subUpdate(key)
         }
-    }
-
-    stopClose(e) {
-        e.preventDefault()
     }
 
     render() {
@@ -68,7 +67,7 @@ class Header extends Component {
                     </div>
 
                     <ButtonToolbar className='mobile_menu'>
-                        <DropdownButton onSelect={k => this.currentKey(k)} >
+                        <DropdownButton title='' onSelect={k => this.currentKey(k)} >
                             <p className='lvl1 custom_lvl' onClick={() => this.currentKey(1)}>Aaron</p>
                             {this.state.main === 1 ? <div>
                                 <Dropdown.Item className='lvl3' eventKey="11">Profile</Dropdown.Item>
@@ -76,7 +75,13 @@ class Header extends Component {
                             </div>
                                 : null
                             }
-                            <Dropdown.Item className='lvl1' eventKey="2">Account</Dropdown.Item>
+                            <p className='lvl1 custom_lvl' onClick={() => this.currentKey(2)}>Account</p>
+                            {this.state.main === 2 ? <div>
+                                <Dropdown.Item className='lvl3' eventKey="21">Setting</Dropdown.Item>
+                                <Dropdown.Item className='lvl3' eventKey="22">User</Dropdown.Item>
+                            </div>
+                                : null
+                            }
                             <Dropdown.Item className='lvl2' eventKey="3">Home</Dropdown.Item>
                             <Dropdown.Item className='lvl2' eventKey="4">Build</Dropdown.Item>
                             <p className='lvl2 custom_lvl' onClick={() => this.currentKey(5)}>Our Brand</p>
