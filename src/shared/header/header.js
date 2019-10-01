@@ -34,9 +34,9 @@ class Header extends Component {
             <div>
                 <Navbar collapseOnSelect expand="lg">
                     <div className='logo'>
-                        <a href='/' >
+                        <p onClick={() => this.currentKey(3)}>
                             <img src='/images/logo.png' alt='logo' />
-                        </a>
+                        </p>
                     </div>
                     <div className='right_nav'>
                         <ul>
